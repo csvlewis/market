@@ -21,8 +21,7 @@ class Market
   end
 
   def sorted_item_list
-    all_items = @vendors.map { |vendor| vendor.inventory.keys }
-    all_items.flatten.uniq.sort
+    @vendors.map { |vendor| vendor.inventory.keys }.flatten.uniq.sort
   end
 
   def total_inventory
