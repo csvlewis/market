@@ -13,7 +13,7 @@ class Market
   end
 
   def vendor_names
-    @vendors.map { |vendor| vendor.name }
+    @vendors.map(&:name)
   end
 
   def vendors_that_sell(item)
@@ -21,7 +21,7 @@ class Market
   end
 
   def sorted_item_list
-    all_items = @vendors.map { |vendor| vendor.inventory.keys}
+    all_items = @vendors.map { |vendor| vendor.inventory.keys }
     all_items.flatten.uniq.sort
   end
 

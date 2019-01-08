@@ -1,4 +1,7 @@
 class Sale
+  attr_reader :item,
+              :amount,
+              :vendors
   def initialize(item, amount, vendors)
     @item = item
     @amount = amount
