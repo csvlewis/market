@@ -18,9 +18,7 @@ class Sale
   end
 
   def check_inventory(vendor)
-    if vendor.inventory.keys.include?(@item)
-      remove_items(vendor)
-    end
+    remove_items(vendor) if vendor.inventory.key?(@item)
   end
 
   def remove_items(vendor)
