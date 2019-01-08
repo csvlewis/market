@@ -44,7 +44,7 @@ class VendorTest < Minitest::Test
       "Peaches"=>55,
       "Tomatoes"=>12
     }
-
+    require 'pry'; binding.pry
     assert_equal hash, vendor.inventory
   end
 end
